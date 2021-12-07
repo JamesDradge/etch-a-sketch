@@ -14,3 +14,11 @@ function createGridDivs() {
 for (let i=0; i<numberOfDivs; i++) {
     createGridDivs();
 }
+
+gridItems = document.querySelectorAll('.grid-item');
+
+gridItems.forEach((div) => {
+    div.addEventListener('mouseenter', (e) => {
+        div.classList.add('black');
+    });
+});

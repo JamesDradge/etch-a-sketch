@@ -14,6 +14,12 @@ body {
     align-content: space-between;
 }
 
+.grid-container
+
 .grid-item {
     border: 1px black solid;
+}
+
+.black {
+    background-color: black;
 }
