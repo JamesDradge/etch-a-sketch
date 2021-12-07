@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .grid-container {
@@ -14,12 +15,14 @@ body {
     align-content: space-between;
 }
 
-.grid-container
-
 .grid-item {
     border: 1px black solid;
 }
 
 .black {
     background-color: black;
+}
+
+.btn-container {
+    margin-bottom: 20px;
 }

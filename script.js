@@ -24,7 +24,7 @@ gridItems.forEach((div) => {
 });
 
 gridItems.forEach((div) => {
-    div.addEventListener('touch', (e) => {
+    div.addEventListener('touchmove', (e) => {
         div.classList.add('black');
     });
 });
