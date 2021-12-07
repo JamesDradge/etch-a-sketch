@@ -23,6 +23,10 @@ body {
     background-color: black;
 }
 
+.red {
+    background-color: red;
+}
+
 .btn-container {
     margin-bottom: 20px;
 }
