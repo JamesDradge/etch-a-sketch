@@ -33,7 +33,6 @@ function createGrid() {
                 case "greyscale":
                     div.classList.add('black');
                     let temp = div.style.opacity + 0.2;
-                    console.log(temp);
                     div.style.opacity = temp;
                     break;
                 case "rainbow":
@@ -84,7 +83,6 @@ function resetGrid() {
 function colorBlack() {
     resetGrid();
     mode = "blackAndWhite";
-    console.log("black and white");
     blackAndWhiteBtn.classList.add('selected');
     greyscaleBtn.classList.remove('selected');
     rainbowBtn.classList.remove('selected');
@@ -105,3 +103,5 @@ function colorRainbow() {
     greyscaleBtn.classList.remove('selected');
     rainbowBtn.classList.add('selected');
 }
+
+colorBlack();
