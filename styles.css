@@ -44,10 +44,6 @@ h1 {
     background-color: black;
 }
 
-.red {
-    background-color: red;
-}
-
 .btn-container {
     margin-right: 100px;
     display: flex;
@@ -85,8 +81,3 @@ h1 {
     margin-left: 16rem;
 
 }
-
-/* #title {
-    display: flex;
-    justify-content: center;
-} */
