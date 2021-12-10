@@ -50,7 +50,7 @@ function calculateSizing() {
 }
 
 function resizeGrid() {
-    let input = prompt("Please enter the number of rows you would like the grid to be");
+    let input = prompt("Please enter the number of rows you would like the grid to be.");
     if (isNaN(input) || input < 1 || input > 100) {
         alert("Please enter a number between 1 - 100.");
     } else {
