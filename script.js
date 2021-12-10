@@ -26,13 +26,22 @@ function createGrid() {
 
     gridItems.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
-            //ADD SWITCH STATMENT HERE
-            // div.classList.add('black');
-            let randColorNumber = Math.floor(Math.random()*16777215).toString(16);
-            let randColor = `#` + `${randColorNumber}`;
-            console.log(randColor);
-            div.style.backgroundColor = `${randColor}`;
-
+            switch (mode){
+                case "blackAndWhite":
+                    div.classList.add('black');
+                    break;
+                case "greyscale":
+                    div.classList.add('black');
+                    let temp = div.style.opacity + 0.2;
+                    console.log(temp);
+                    div.style.opacity = temp;
+                    break;
+                case "rainbow":
+                    let randColorNumber = Math.floor(Math.random()*16777215).toString(16);
+                    let randColor = `#` + `${randColorNumber}`;
+                    div.style.backgroundColor = `${randColor}`;
+                    break;
+            }
         });
     });
 }
@@ -73,6 +82,7 @@ function resetGrid() {
 }
 
 function colorBlack() {
+    resetGrid();
     mode = "blackAndWhite";
     console.log("black and white");
     blackAndWhiteBtn.classList.add('selected');
@@ -81,6 +91,7 @@ function colorBlack() {
 }
 
 function colorGreyscale() {
+    resetGrid();
     mode = "greyscale";
     blackAndWhiteBtn.classList.remove('selected');
     greyscaleBtn.classList.add('selected');
@@ -88,6 +99,7 @@ function colorGreyscale() {
 }
 
 function colorRainbow() {
+    resetGrid();
     mode = "rainbow";
     blackAndWhiteBtn.classList.remove('selected');
     greyscaleBtn.classList.remove('selected');
