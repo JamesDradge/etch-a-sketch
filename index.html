@@ -3,12 +3,31 @@
 <head>
     <title>Etch-a-Sketch!</title>
     <script src="script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Readex+Pro:wght@700&display=swap');
+    </style>
+        
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="btn-container">
-        <button class="btn">Clear</button>
+    <div class ="header">
+        <h1 id="title">Etch-a-Sketch!</h1>
     </div>
-    <div class="grid-container"></div>
+
+    <div class="main-content">
+        <div class="btn-container">
+            <button class="btn">CLEAR</button>
+            <button class="btn">BLACK & WHITE</button>
+            <button class="btn">GREYSCALE</button>
+            <button class="btn">RAINBOW</button>
+        </div>
+        <div class="grid-container"></div>
+    </div>
+    <div id = 'grid-btn-container'>
+        <button class="btn" id='resize-btn'>GRID</button>
+    </div>
+    <div class = "footer">
+
+    </div>
 </body>
 </html>

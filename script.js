@@ -1,7 +1,7 @@
 let gridRows = 16;
 let numberOfDivs = gridRows * gridRows;
 const gridPixels = 400;
-const gridSizePixels = gridPixels/gridRows - 2;
+const gridSizePixels = gridPixels/gridRows;
 const container = document.querySelector(".grid-container");
 const resetBtn = document.querySelector(".btn");
 
