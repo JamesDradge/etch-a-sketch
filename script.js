@@ -12,7 +12,7 @@ const rainbowBtn = document.querySelector("#rainbow");
 
 window.onload = createGrid();
 resetBtn.addEventListener("click", resetGrid);
-resizeBtn.addEventListener("click", resizeGrid);
+resizeBtn.addEventListener("click", getPlayerInput);
 blackAndWhiteBtn.addEventListener("click", colorBlack);
 greyscaleBtn.addEventListener("click", colorGreyscale);
 rainbowBtn.addEventListener("click", colorRainbow);
@@ -27,10 +27,11 @@ function createGrid() {
     gridItems.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
             //ADD SWITCH STATMENT HERE
-            div.classList.add('black');
-            // let randColorNumber = Math.floor(Math.random()*16777215).toString(16);
-            // let randColor = `# + ${randColorNumber}`;
-            // div.setAttribute('style', `background-color: red; `);
+            // div.classList.add('black');
+            let randColorNumber = Math.floor(Math.random()*16777215).toString(16);
+            let randColor = `#` + `${randColorNumber}`;
+            console.log(randColor);
+            div.style.backgroundColor = `${randColor}`;
 
         });
     });
@@ -50,27 +51,25 @@ function createGridDivs() {
     container.appendChild(gridItem);
 }
 
-function resetGrid() {
-    gridItems.forEach((div) => {
-        div.classList = 'grid-item';
-    })
-}
-
 function calculateSizing() {
     numberOfDivs = gridRows * gridRows;
     gridSizePixels = gridPixels/gridRows;
 }
 
-function resizeGrid() {
+function getPlayerInput() {
     let input = prompt("Please enter the number of rows you would like the grid to be.");
     if (isNaN(input) || input < 1 || input > 100) {
         alert("Please enter a number between 1 - 100.");
     } else {
         gridRows = input;
+        resetGrid();
+    }
+}
+
+function resetGrid() {
         deleteGrid();
         calculateSizing();
         createGrid();
-    }
 }
 
 function colorBlack() {
