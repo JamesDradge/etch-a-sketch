@@ -72,6 +72,12 @@ h1 {
     transform: scale(1.1);
 }
 
+.selected {
+    outline: #00d9ff solid 5px;
+    transition: 300ms;
+    transform: scale(1.1);
+}
+
 #grid-btn-container {
     display: flex;
     justify-content: center;

@@ -2,13 +2,20 @@ let gridRows = 16;
 let numberOfDivs = gridRows * gridRows;
 let gridPixels = 400;
 let gridSizePixels = gridPixels/gridRows;
+let mode = "blackAndWhite";
 const container = document.querySelector(".grid-container");
 const resizeBtn = document.querySelector("#resize-btn");
 const resetBtn = document.querySelector(".btn");
+const blackAndWhiteBtn = document.querySelector("#black-and-white");
+const greyscaleBtn = document.querySelector("#greyscale");
+const rainbowBtn = document.querySelector("#rainbow");
 
 window.onload = createGrid();
 resetBtn.addEventListener("click", resetGrid);
 resizeBtn.addEventListener("click", resizeGrid);
+blackAndWhiteBtn.addEventListener("click", colorBlack);
+greyscaleBtn.addEventListener("click", colorGreyscale);
+rainbowBtn.addEventListener("click", colorRainbow);
 
 function createGrid() {
     for (let i=0; i<numberOfDivs; i++) {
@@ -19,7 +26,12 @@ function createGrid() {
 
     gridItems.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
+            //ADD SWITCH STATMENT HERE
             div.classList.add('black');
+            // let randColorNumber = Math.floor(Math.random()*16777215).toString(16);
+            // let randColor = `# + ${randColorNumber}`;
+            // div.setAttribute('style', `background-color: red; `);
+
         });
     });
 }
@@ -59,4 +71,26 @@ function resizeGrid() {
         calculateSizing();
         createGrid();
     }
+}
+
+function colorBlack() {
+    mode = "blackAndWhite";
+    console.log("black and white");
+    blackAndWhiteBtn.classList.add('selected');
+    greyscaleBtn.classList.remove('selected');
+    rainbowBtn.classList.remove('selected');
+}
+
+function colorGreyscale() {
+    mode = "greyscale";
+    blackAndWhiteBtn.classList.remove('selected');
+    greyscaleBtn.classList.add('selected');
+    rainbowBtn.classList.remove('selected');
+}
+
+function colorRainbow() {
+    mode = "rainbow";
+    blackAndWhiteBtn.classList.remove('selected');
+    greyscaleBtn.classList.remove('selected');
+    rainbowBtn.classList.add('selected');
 }
