@@ -31,9 +31,13 @@ function createGrid() {
                     div.classList.add('black');
                     break;
                 case "greyscale":
-                    div.classList.add('black');
-                    let temp = div.style.opacity + 0.2;
-                    div.style.opacity = temp;
+                    div.style.backgroundColor = ('black');
+                    if (!e.target.style.opacity) {
+                        e.target.style.opacity = 0.2;
+                    } else {
+                        newOpacity = Number(e.target.style.opacity) + 0.2;
+                        e.target.style.opacity = newOpacity
+                    }
                     break;
                 case "rainbow":
                     let randColorNumber = Math.floor(Math.random()*16777215).toString(16);
