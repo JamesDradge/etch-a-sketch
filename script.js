@@ -17,6 +17,7 @@ blackAndWhiteBtn.addEventListener("click", colorBlack);
 greyscaleBtn.addEventListener("click", colorGreyscale);
 rainbowBtn.addEventListener("click", colorRainbow);
 
+
 function createGrid() {
     for (let i=0; i<numberOfDivs; i++) {
         createGridDivs();

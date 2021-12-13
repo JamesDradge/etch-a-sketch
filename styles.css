@@ -2,6 +2,13 @@ html {
     background-color: #e0e7f0;
 }
 
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 h1 {
     all: unset;
     font-family: 'Permanent Marker', cursive;
@@ -21,6 +28,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* flex: 1; */
 }
 
 .grid-container {
@@ -73,10 +81,33 @@ h1 {
     transform: scale(1.1);
 }
 
-#grid-btn-container {
+.footer {
+    background-color: #458F87;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80px;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+}
+
+.footer-text {
+    color: #302f2f;
+    font-size: 15px;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: bolder;
+}
+
+#grid-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex: 1;
 }
 
 #resize-btn {
