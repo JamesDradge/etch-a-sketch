@@ -94,6 +94,12 @@ h1 {
 .logo {
     height: 40px;
     width: 40px;
+    transition: 300ms;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition: 300ms;
 }
 
 .footer-text {
