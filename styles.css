@@ -103,6 +103,10 @@ h1 {
     font-weight: bolder;
 }
 
+.footer-text a {
+    color: #302f2f;
+}
+
 #grid-btn-container {
     display: flex;
     justify-content: center;
